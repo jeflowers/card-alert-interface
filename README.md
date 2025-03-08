@@ -1,8 +1,8 @@
-# NYCE Card Alert Interface
+# Card Alert Interface
 
 ## Project Overview
 
-The Card Alert Interface is a comprehensive fraud analytics system designed for NYCE to detect, process, and manage suspicious card transactions efficiently.
+The Card Alert Interface is a comprehensive fraud analytics system designed to detect, process, and manage suspicious card transactions efficiently.
 
 ## Features
 
