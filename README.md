@@ -11,6 +11,16 @@ The Card Alert Interface is a comprehensive fraud analytics system designed to d
 - Card Block & Reissue Workflow
 - Fraud Export Capabilities
 
+## System Architecture
+
+For detailed information about the Card Alert Interface architecture, please see the [Architecture Documentation](docs/architecture/README.md).
+
+The architecture documentation includes:
+- [UML Class Diagram](docs/architecture/diagrams/uml-class-diagram.md)
+- [System Flow Design](docs/architecture/diagrams/system-flow-design.md)
+- [Activity Diagram](docs/architecture/diagrams/system-activity-diagram.md)
+- [Data Flow Diagram](docs/architecture/diagrams/data-flow-diagram.md)
+
 ## Prerequisites
 
 - Node.js (v16+ recommended)
@@ -49,6 +59,7 @@ The Card Alert Interface is a comprehensive fraud analytics system designed to d
 - `frontend/`: HTML, JavaScript, and Tailwind CSS frontend
 - `database/`: Database schemas and seed data
 - `docs/`: Project documentation
+  - `architecture/`: System architecture diagrams and specifications
 - `tests/`: Unit and integration tests
 
 ## Testing
