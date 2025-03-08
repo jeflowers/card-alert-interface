@@ -20,7 +20,7 @@ The **Fraud Analytics Card Alert Interface (FACAI)** is a web-based front-end de
 ## Setup Instructions
 ### 1. Clone the Repository
 ```sh
- git clone https://github.com/YOUR_USERNAME/card-alert-interface.git
+ git clone https://github.com/jeflowers/card-alert-interface.git
  cd card-alert-interface
 ```
 
