@@ -1,22 +1,14 @@
-/**
- * Case Routes - Defines API endpoints for cases
- */
-
 const express = require('express');
+const router = express.Router();
 const caseController = require('../controllers/caseController');
 
-const router = express.Router();
+// Route to create a new case
+router.post('/', caseController.createCase);
 
-// Get all cases
-router.get('/', caseController.getAllCases);
+// Route to update an existing case
+router.put('/:caseId', caseController.updateCase);
 
-// Get a single case by ID
-router.get('/:id', caseController.getCaseById);
-
-// Update case status
-router.put('/:id/status', caseController.updateCaseStatus);
-
-// Generate daily fraud cases file
-router.post('/generate-fraud-file', caseController.generateFraudCasesFile);
+// Route to get all cases
+router.get('/', caseController.getCases);
 
 module.exports = router;

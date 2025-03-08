@@ -1,19 +1,11 @@
-/**
- * Card Routes - Defines API endpoints for cards
- */
-
 const express = require('express');
+const router = express.Router();
 const cardController = require('../controllers/cardController');
 
-const router = express.Router();
+// Route to block a card
+router.post('/block', cardController.blockCard);
 
-// Get all blocked cards
-router.get('/blocked', cardController.getAllBlockedCards);
-
-// Block a card
-router.post('/:cardNumber/block', cardController.blockCard);
-
-// Reissue a card
-router.post('/:cardNumber/reissue', cardController.reissueCard);
+// Route to reissue a card
+router.post('/reissue', cardController.reissueCard);
 
 module.exports = router;

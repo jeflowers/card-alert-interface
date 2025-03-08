@@ -2,10 +2,8 @@ const database = require('../config/dbConfig');
 
 class AlertModel {
   static async detectSuspiciousTransaction(transaction) {
-    // Implement suspicious transaction detection logic
     const { amount, merchantCategory, customerSpendingPattern } = transaction;
     
-    // Example detection criteria
     const THRESHOLD_AMOUNT = process.env.TRANSACTION_THRESHOLD_AMOUNT || 5000;
     const SUSPICIOUS_RATIO = process.env.SUSPICIOUS_TRANSACTION_RATIO || 0.8;
 
@@ -13,7 +11,6 @@ class AlertModel {
       return true;
     }
 
-    // More complex detection logic could be added here
     return false;
   }
 

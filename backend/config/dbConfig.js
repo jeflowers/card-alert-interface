@@ -1,73 +1,42 @@
-/**
- * Database Configuration - Configures the connection to the Oracle database
- */
-
 const oracledb = require('oracledb');
-const dotenv = require('dotenv');
+require('dotenv').config();
 
-dotenv.config();
-
-// Oracle connection pool configuration
-let pool;
-
-async function initialize() {
-  try {
-    pool = await oracledb.createPool({
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      connectString: process.env.DB_CONNECT_STRING,
-      poolMin: 1,
-      poolMax: 5,
-      poolIncrement: 1
-    });
-    
-    console.log('Oracle database connection pool initialized successfully');
-  } catch (error) {
-    console.error('Error initializing Oracle connection pool:', error);
-    throw error;
+class DatabaseConfig {
+  static async initialize() {
+    try {
+      await oracledb.createPool({
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        connectString: `${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
+        poolMin: 2,
+        poolMax: 10,
+        poolIncrement: 1
+      });
+      console.log('Database connection pool created successfully');
+    } catch (error) {
+      console.error('Error creating database connection pool:', error);
+      throw error;
+    }
   }
-}
 
-// Initialize the pool when this module is loaded
-initialize();
+  static async getConnection() {
+    try {
+      return await oracledb.getConnection();
+    } catch (error) {
+      console.error('Error getting database connection:', error);
+      throw error;
+    }
+  }
 
-// Database query wrapper
-async function query(sql, params = []) {
-  let connection;
-  try {
-    connection = await pool.getConnection();
-    
-    // Set output format to objects
-    const options = {
-      outFormat: oracledb.OUT_FORMAT_OBJECT,
-      autoCommit: true
-    };
-    
-    const result = await connection.execute(sql, params, options);
-    return result.rows;
-  } catch (error) {
-    console.error('Database error:', error);
-    throw error;
-  } finally {
-    if (connection) {
-      try {
-        await connection.close();
-      } catch (error) {
-        console.error('Error closing connection:', error);
-      }
+  static async closePool() {
+    try {
+      await oracledb.getPool().close();
+      console.log('Database connection pool closed');
+    } catch (error) {
+      console.error('Error closing database connection pool:', error);
+      throw error;
     }
   }
 }
 
-// Close the pool (call when shutting down the application)
-async function close() {
-  try {
-    await pool.close();
-    console.log('Oracle connection pool closed');
-  } catch (error) {
-    console.error('Error closing Oracle connection pool:', error);
-    throw error;
-  }
-}
-
-module.exports = { query, close };
+module.exports = DatabaseConfig;
