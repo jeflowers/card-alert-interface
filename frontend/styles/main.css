@@ -1,112 +1,28 @@
-/* Main styles for Card Alert Interface */
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* Custom styles for Card Alert Interface */
+body {
+    font-family: 'Inter', sans-serif;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+.card {
+    @apply bg-white shadow-md rounded-lg p-4 transition-all duration-300 hover:shadow-lg;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
+.btn-primary {
+    @apply bg-nyce-blue text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #999;
+.btn-danger {
+    @apply bg-nyce-red text-white px-4 py-2 rounded hover:bg-red-700 transition-colors;
 }
 
-/* Status badges */
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.25rem 0.5rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 500;
+.badge {
+    @apply inline-block px-2 py-1 text-xs font-semibold rounded;
 }
 
-.status-new {
-  background-color: #e0f2fe;
-  color: #0369a1;
+.badge-suspicious {
+    @apply bg-yellow-100 text-yellow-800;
 }
 
-.status-investigating {
-  background-color: #fef3c7;
-  color: #92400e;
-}
-
-.status-confirmed {
-  background-color: #fee2e2;
-  color: #b91c1c;
-}
-
-.status-resolved {
-  background-color: #dcfce7;
-  color: #166534;
-}
-
-.status-cased {
-  background-color: #e0e7ff;
-  color: #4338ca;
-}
-
-/* Priority indicators */
-.priority-high {
-  background-color: #fee2e2;
-  color: #b91c1c;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.priority-medium {
-  background-color: #fef3c7;
-  color: #92400e;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.priority-low {
-  background-color: #e0f2fe;
-  color: #0369a1;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-/* Modal styles */
-.modal {
-  transition: opacity 0.2s ease;
-}
-
-/* Animation for rows */
-@keyframes highlightRow {
-  0% {
-    background-color: #fef3c7;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-.highlight-row {
-  animation: highlightRow 2s ease;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .tab-button {
-    padding: 0.5rem;
-    font-size: 0.875rem;
-  }
-  
-  th, td {
-    padding: 0.5rem 0.25rem;
-    font-size: 0.75rem;
-  }
+.badge-blocked {
+    @apply bg-red-100 text-red-800;
 }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <title>NYCE Card Alert Interface</title>
+  <rect width="200" height="50" fill="#0056b3"/>
+  <text x="100" y="30" text-anchor="middle" fill="white" font-size="24" font-family="Arial, sans-serif">
+    NYCE
+  </text>
+</svg>
