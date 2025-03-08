@@ -4,6 +4,17 @@
 
 The Card Alert Interface is a comprehensive fraud analytics system designed to detect, process, and manage suspicious card transactions efficiently. This document provides an overview of the system architecture, including UML diagrams, flow designs, and data models that represent the system's structure and behavior.
 
+## System Architecture Diagram
+
+![Card Alert Interface System Architecture](images/system-architecture.svg)
+
+The system architecture diagram above illustrates the four key processes of the Card Alert Interface system:
+
+1. **Data Collection** - Continuously monitors transaction data from multiple payment sources in real-time
+2. **Analysis & Detection** - AI algorithms analyze transaction patterns against known fraud signatures and anomaly detection models
+3. **Alert Generation** - When suspicious activity is detected, the system generates targeted alerts with risk assessment
+4. **Response & Feedback** - System operators review alerts, take appropriate actions, and provide feedback to improve detection accuracy
+
 ## Architecture Diagrams
 
 The following diagrams represent different perspectives on the system architecture:
