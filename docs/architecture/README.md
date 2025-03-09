@@ -6,7 +6,9 @@ The Card Alert Interface is a comprehensive fraud analytics system designed to d
 
 ## System Architecture Diagram
 
-![Card Alert Interface System Architecture](images/system-architecture.svg)
+![Card Alert Interface System Architecture](images/system-architecture.png)
+
+*View as [SVG](images/system-architecture.svg) for higher quality.*
 
 The system architecture diagram above illustrates the four key processes of the Card Alert Interface system:
 
