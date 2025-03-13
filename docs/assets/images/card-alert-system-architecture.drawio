@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1161" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- Card Alert Interface Box -->
+    <mxCell id="2" value="Card Alert Interface" style="rounded=1;strokeColor=#000000;fillColor=#FFFFFF;dashed=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="750" height="500" as="geometry" />
+    </mxCell>
+
+    <!-- External Systems -->
+    <mxCell id="3" value="Payment Processing Systems&#xa;(Transaction Sources)" style="rounded=1;strokeColor=#000000;fillColor=#DDDDDD;" vertex="1" parent="1">
+      <mxGeometry x="10" y="150" width="180" height="80" as="geometry" />
+    </mxCell>
+
+    <mxCell id="4" value="Card Processing Systems&#xa;(Block/Reissue Actions)" style="rounded=1;strokeColor=#000000;fillColor=#DDDDDD;" vertex="1" parent="1">
+      <mxGeometry x="10" y="400" width="200" height="80" as="geometry" />
+    </mxCell>
+
+    <!-- Data Collection -->
+    <mxCell id="5" value="1️⃣ Data Collection&#xa;- Transaction Monitoring&#xa;- Data Normalization&#xa;- Real-time Processing" style="rounded=1;strokeColor=#0000FF;fillColor=#E0EBFF;" vertex="1" parent="1">
+      <mxGeometry x="220" y="100" width="200" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Analysis & Detection -->
+    <mxCell id="6" value="2️⃣ Analysis & Detection&#xa;- Pattern Recognition&#xa;- Fraud Signatures&#xa;- Anomaly Detection&#xa;- Alert Notification" style="rounded=1;strokeColor=#800080;fillColor=#EAE0F8;" vertex="1" parent="1">
+      <mxGeometry x="450" y="100" width="200" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Alert Generation -->
+    <mxCell id="7" value="3️⃣ Alert Generation&#xa;- Risk Scoring&#xa;- Alert Enrichment&#xa;- Notification" style="rounded=1;strokeColor=#FFA500;fillColor=#FFF5E1;" vertex="1" parent="1">
+      <mxGeometry x="680" y="100" width="200" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Response & Feedback -->
+    <mxCell id="8" value="4️⃣ Response & Feedback&#xa;- Case Management (Investigation Workflow)&#xa;- Card Actions (Block & Reissue)" style="rounded=1;strokeColor=#808080;fillColor=#E0E0E0;" vertex="1" parent="1">
+      <mxGeometry x="450" y="250" width="200" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- User Interface -->
+    <mxCell id="9" value="Fraud Analyst&#xa;- Web Interface&#xa;- Alert/Case Management" style="rounded=1;strokeColor=#008000;fillColor=#D4EFDF;" vertex="1" parent="1">
+      <mxGeometry x="220" y="250" width="200" height="100" as="geometry" />
+    </mxCell>
+
+    <!-- Data Storage Layer -->
+    <mxCell id="10" value="Data Storage Layer" style="rounded=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="220" y="400" width="650" height="120" as="geometry" />
+    </mxCell>
+
+    <mxCell id="11" value="Alert DB (FRAUD_ALERT)" style="rounded=1;strokeColor=#000000;fillColor=#EEEEEE;" vertex="1" parent="1">
+      <mxGeometry x="240" y="450" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="12" value="Case DB (CS_CASE)" style="rounded=1;strokeColor=#000000;fillColor=#EEEEEE;" vertex="1" parent="1">
+      <mxGeometry x="400" y="450" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="13" value="Card DB (FRAUD_HOTLIST)" style="rounded=1;strokeColor=#000000;fillColor=#EEEEEE;" vertex="1" parent="1">
+      <mxGeometry x="560" y="450" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="14" value="Audit DB (CS_CASE_ACTION)" style="rounded=1;strokeColor=#000000;fillColor=#EEEEEE;" vertex="1" parent="1">
+      <mxGeometry x="720" y="450" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Arrows -->
+    <mxCell id="15" edge="1" source="3" target="5">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="16" edge="1" source="5" target="6">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="17" edge="1" source="6" target="7">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="18" edge="1" source="7" target="8">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="19" edge="1" source="8" target="4">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="20" edge="1" source="8" target="10">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="21" edge="1" source="9" target="8">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <mxCell id="22" edge="1" source="9" target="10">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
