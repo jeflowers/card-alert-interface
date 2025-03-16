@@ -1,28 +1,22 @@
-/* Animated Gradient Background */
+/* --- Animated Gradient Background --- */
 .animated-gradient {
   background: linear-gradient(-45deg, #3b82f6, #6366f1, #8b5cf6, #3b82f6);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  position: relative;
 }
 
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* Code Block Container */
+/* Code Block Container with Copy Button */
 .code-block {
   position: relative;
 }
 
-/* Copy Button Styling */
 .copy-button {
   position: absolute;
   top: 0.5rem;
@@ -31,28 +25,54 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s;
 }
 
 .copy-button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Interactive Feature Card */
+/* Interactive Feature Cards */
 .feature-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
 }
 
-/* Tab Content Visibility */
-.tab-content {
-  display: none;
+/* Code Block Container */
+.code-block {
+  position: relative;
 }
 
-.tab-content.active {
-  display: block;
+/* Header Styling with Gradient Overlay */
+header {
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
 }
+
+/* Button Styling */
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  color: #ffffff;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Colors Legend */
+/* 
+  - Dark Background: #2D2D2D
+  - Primary Green: #4CAF50
+  - Primary Blue: #3b82f6
+  - Secondary Colors: #6366f1, #8b5cf6
+  - Shadow: rgba(0,0,0,0.1)
+*/
+
